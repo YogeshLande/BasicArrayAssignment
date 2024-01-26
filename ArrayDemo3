@@ -1,0 +1,28 @@
+//Q4 Find the Product of Array Element
+
+import java.util.Scanner;
+
+public class ArrayDemo3 {
+    static void Product(int arr[]){
+        int product =1;
+        for(int i=0;i<arr.length;i++){
+            product=product*arr[i];
+        }
+        System.out.println("The Product of array Element is "+product);
+
+    }
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size of Array");
+        int size = sc.nextInt();
+
+        int arr[]= new int[size];
+
+        System.out.println("Enter the Element of Array");
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        Product(arr);
+    }
+
+}
