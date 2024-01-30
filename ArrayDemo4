@@ -1,0 +1,52 @@
+//Q6 Find the Range between A & B
+import java.util.*;
+public class ArrayDemo5{
+
+    static boolean  ArrayDemo(int[]arr,int Size){
+        int A =2;
+        int B=5;
+        if(A>B) {
+            return false;
+        }
+        for(int i=A;i<=B;i++){
+            boolean found =false;
+            for(int j=0;j<arr.length;j++){
+                if(arr[j]==i){
+                    found =true;
+                    break;
+                }
+
+            }
+            if(!found){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size of Array");
+        int Size =sc.nextInt();
+
+        int arr[] = new int[Size];
+
+        System.out.println("Enter the Element into the Array ");
+        for(int i=0;i<arr.length;i++){
+            arr[i]= sc.nextInt();
+        }
+
+        boolean Result =ArrayDemo(arr,Size);
+
+        if(Result){
+            System.out.println("Yes");
+        }else {
+            System.out.println("No");
+        }
+
+
+
+
+       }
+
+    }
+
