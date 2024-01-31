@@ -1,0 +1,30 @@
+//Find Largest number formed from Combination of the Array Element
+
+
+import java.util.*;
+public class ArrayDemo6 {
+
+    static void maxele(int arr[],int size){
+        Arrays.sort(arr);
+        System.out.println("Largest Number Using Combination of Array Element is ");
+
+        for(int j=size-1;j>=0;j--){
+            System.out.print(+arr[j]);
+        }
+
+    }
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size of Array Element");
+        int Size  = sc.nextInt();
+
+        int arr[]= new int[Size];
+
+        System.out.println("Enter the Array Element ");
+        for(int i=0;i<arr.length;i++){
+            arr[i]= sc.nextInt();
+        }
+
+        maxele(arr,Size);
+    }
+}
