@@ -1,0 +1,49 @@
+//the product of maximum in first Array and minimum in second array
+
+import java.util.Scanner;
+
+public class ArrayDemo9 {
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size of Array1 ");
+        int Size1 = sc.nextInt();
+
+        int arr1[]= new int[Size1];
+
+        System.out.println("Enter the Size of Array2 ");
+        int Size2 = sc.nextInt();
+
+        int arr2[]= new int[Size2];
+
+        System.out.println("Enter the Element of First Array ");
+        for(int j=0;j<arr1.length;j++){
+            arr1[j]=sc.nextInt();
+        }
+
+        System.out.println("Enter Element of Second Array ");
+        for(int k =0;k<arr2.length;k++){
+            arr2[k]=sc.nextInt();
+        }
+
+
+        int maxele = Integer.MIN_VALUE;
+        int Minele = Integer.MAX_VALUE;
+
+        for(int i=0;i<arr1.length;i++){
+            if(arr1[i]>maxele){
+                maxele=arr1[i];
+            }
+        }
+
+        for(int i=0;i<arr2.length;i++){
+            if(arr2[i]<Minele){
+                Minele=arr2[i];
+            }
+        }
+
+        System.out.println("The Product is : "+maxele*Minele);
+
+
+    }
+
+}
