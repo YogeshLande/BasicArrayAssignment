@@ -1,0 +1,57 @@
+//Return the Index of First X  element present array And Last X ELement present in array
+//If Element is not present then Return -1
+import java.util.*;
+public class ArrayDemo10 {
+    static void Element(int arr[],int x){
+
+
+
+        for(int element :arr){
+            if(element!=x){
+
+            }
+            System.out.println("Element Not Found  ans Will Come 00 ");
+        }
+
+        int firsteleindex =0;
+        int lastindex =0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==x){
+                firsteleindex =i;
+                break;
+            }
+        }
+        for(int j=arr.length-1;j>=0;j--){
+            if(arr[j]==x){
+                lastindex=j;
+                break;
+
+            }
+        }
+        System.out.print(firsteleindex+" ");
+        System.out.print(lastindex);
+
+    }
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size of Array ");
+        int Size =sc.nextInt();
+        int arr[] = new int[Size];
+
+        System.out.println("Enter the Element of array ");
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+
+        Arrays.sort(arr);
+        System.out.println("Your Sorted Array is");
+        for(int k=0;k<arr.length;k++){
+            System.out.print(arr[k]+" ");
+        }
+        System.out.println();
+        System.out.println("Enter the Element Which you Search First and Last index");
+        int x = sc.nextInt();
+
+        Element(arr,x);
+    }
+}
