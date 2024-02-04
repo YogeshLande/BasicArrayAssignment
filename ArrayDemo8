@@ -1,0 +1,27 @@
+public class ArrayDemo11 {
+    public static void main(String[] args) {
+        // Test cases
+        String s1 = "00001";
+        String s2 = "01010";
+        String s3 = "11111";
+        String s4 = "00000";
+        String s5 = "10101";
+
+        // Print the last index of 1 in each string
+        System.out.println(lastIndexOfOne(s1)); // 4
+        System.out.println(lastIndexOfOne(s2)); // 3
+        System.out.println(lastIndexOfOne(s3)); // 4
+        System.out.println(lastIndexOfOne(s4)); // -1
+        System.out.println(lastIndexOfOne(s5)); // 4
+    }
+    
+
+    // Returns the last index of 1 in a string of 0s and 1s
+    // If 1 is not present, returns -1
+    public static int lastIndexOfOne(String s) {
+        // Use the lastIndexOf method with '1' as the argument
+      return s.lastIndexOf('1');
+   }
+}
+
+
